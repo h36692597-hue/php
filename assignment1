@@ -1,0 +1,91 @@
+<?php
+
+$a = 25;
+$b = 10;
+$c = 40;
+
+if ($a > $b && $a > $c) {
+    $greatest = $a;
+} elseif ($b > $a && $b > $c) {
+    $greatest = $b;
+} else {
+    $greatest = $c;
+}
+
+if ($a < $b && $a < $c) {
+    $smallest = $a;
+} elseif ($b < $a && $b < $c) {
+    $smallest = $b;
+} else {
+    $smallest = $c;
+}
+
+echo "Greatest number = " . $greatest . "<br>";
+echo "Smallest number = " . $smallest;
+
+?>
+2:<?php
+
+$num = 15;
+
+if ($num % 3 == 0 && $num % 5 == 0) {
+    echo "The number is divisible by both 3 and 5.";
+} elseif ($num % 3 == 0) {
+    echo "The number is divisible by 3.";
+} elseif ($num % 5 == 0) {
+    echo "The number is divisible by 5.";
+} else {
+    echo "The number is divisible by neither 3 nor 5.";
+}
+
+?>
+3:<?php
+
+echo "Odd numbers from 2 to 20:<br>";
+
+for ($i = 2; $i <= 20; $i++) {
+    if ($i % 2 != 0) {
+        echo $i . " ";
+    }
+}
+
+?>
+B:<?php
+
+echo "Even numbers from 35 to 7:<br>";
+
+for ($i = 35; $i >= 7; $i--) {
+    if ($i % 2 == 0) {
+        echo $i . " ";
+    }
+}
+
+?>
+4: <?php
+
+echo "Numbers divisible by 2 and 5:<br>";
+
+for ($i = 50; $i >= 2; $i--) {
+    if ($i % 2 == 0 && $i % 5 == 0) {
+        echo $i . " ";
+    }
+}
+
+?>
+5:<?php
+
+$num = 12345;
+$reverse = 0;
+
+while ($num > 0) {
+
+    $digit = $num % 10;
+
+    $reverse = ($reverse * 10) + $digit;
+
+    $num = intdiv($num, 10);
+}
+
+echo "Reverse = " . $reverse;
+
+?>
